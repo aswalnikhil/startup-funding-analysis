@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🇮🇳 Indian Startup Funding Analysis (2015–2020)
 
-## Getting Started
+An interactive data journalism piece analyzing 3,000+ startup funding deals in India — uncovering where the money really went, who got it, and what the ecosystem looked like before the boom.
 
-First, run the development server:
+🔗 **[Live Website](https://startup-funding-analysis.vercel.app/)**
+
+---
+
+## Key Findings
+
+**1. Peak deals ≠ peak money**
+2016 had the most deals (993) but 2017 had the most funding ($10.4B). Average cheque size grew from $6.5M to $22.8M as the market consolidated around winners.
+
+**2. Volume and value are not the same thing**
+E-Commerce raised $8.24B with only 296 deals vs Consumer Internet's $6.25B with 941 deals. The most active sector was not the most funded sector.
+
+**3. Almost no one survives seed**
+98.4% of seed-funded startups never raised a Series A. Of 1,500 seed deals, only 24 progressed to the next stage.
+
+**4. Late stage takes almost everything**
+Late stage deals attracted $28.3B vs early stage's $889M — across a similar number of deals.
+
+**5. India's startup map is three cities**
+Bangalore (840), Mumbai (567), and Delhi (455) accounted for over 60% of all deals. Hyderabad had just 99.
+
+**6. Big money has no seasonality**
+Deal counts were stable year-round but August ($5.8B) and November ($4.35B) saw massive spikes driven by mega-rounds.
+
+---
+
+## Tech Stack
+
+| Layer | Tools |
+|---|---|
+| Data Collection | Kaggle — Indian Startup Funding Dataset |
+| Data Cleaning | Python, Pandas |
+| Analysis | Pandas, NumPy |
+| Visualizations | Matplotlib, Seaborn |
+| Website | Next.js, Tailwind CSS, Recharts |
+| Deployment | Vercel |
+
+---
+
+## Project Structure
+
+
+---
+
+## Data Notes
+
+- Dataset sourced from Kaggle (Indian Startup Funding, 2015–2020)
+- 3,043 entries after cleaning
+- One outlier removed (Rapido $3.9B — likely data entry error)
+- City variants standardised (Bengaluru → Bangalore, Gurugram → Gurgaon)
+- Industry categories unified (eCommerce, ECommerce → E-Commerce)
+- Undisclosed amounts excluded from monetary totals but included in deal counts
+
+---
+
+## Local Setup
 
 ```bash
+git clone https://github.com/aswalnikhil/startup-funding-analysis.git
+cd startup-funding-analysis
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Author
 
-## Learn More
+**Nikhil Aswal** — Data Analyst  
+[LinkedIn](https://www.linkedin.com/in/nikhil-aswal/) · [GitHub](https://github.com/aswalnikhil)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Built as part of a data analysis portfolio project. Analysis notebook available in the `/analysis` folder.*
